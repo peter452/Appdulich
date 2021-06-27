@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.Activity.MapActivity">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:elevation="10dp"
+        android:background="#fff"
+        android:id="@+id/relativeLayout1">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/TitlePhu"
+            android:fontFamily="@string/google_api_key"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:textColor="#000"
+            android:hint="Enter your search term"
+            android:imeOptions="actionSearch"
+            android:id="@+id/txt_search"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_search"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:id="@+id/RecyclerViewMenu"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/RecyclerViewMenu"
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerviewMapSearch"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
